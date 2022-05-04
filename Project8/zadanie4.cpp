@@ -22,4 +22,14 @@ int main()
 			swap(alltxt[i], alltxt[n - i - 1]);
 	}
 	cout << "all invers txt: " << alltxt;
+	file1.close();
+
+	ofstream file2;
+	file2.open("zadanie4_rezult.txt");
+	if (!file2.is_open())
+		cout << "Error" << endl;
+	else
+		file2 << alltxt << endl;
+
+
 }
